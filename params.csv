@@ -1,4 +1,4 @@
-id,name,position,trion,defense_cover,spped,tech,range,command,special_tact,total
+id,名前,ポジション,トリオン,防御・援護,機動,技術,射程,指揮,特殊戦術,トータル
 1,三浦雄太,	アタッカー,	5,	6,	6,	8,	6,	2,	2,	38
 2,三輪秀次,	オールラウンダー,	6,	8,	8,	7,	9,	3,	6,	52
 3,三雲修,	シューター,	2,	3,	4,	4,	5,	4,	6,	32
