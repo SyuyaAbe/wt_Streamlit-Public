@@ -17,7 +17,7 @@ selected_data = df[df['name'] == name]
 # レーダーチャートを描画
 if not selected_data.empty:
     st.markdown(f'## {name} のパラメータ')
-    radar_data = selected_data[['trion', 'defense_cover', 'spped', 'tech', 'range', 'command', 'special_tact']]
+    radar_data = selected_data[['トリオン', '防御・援護', '機動', '技術', '射程', '指揮', '特殊戦術']]
     radar_data = radar_data.T.reset_index()
     radar_data.columns = ['parameter', 'value']
 
