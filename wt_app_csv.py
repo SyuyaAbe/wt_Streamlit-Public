@@ -9,7 +9,7 @@ st.title('ワートリ 隊員パラメータ')
 df = pd.read_csv('./params.csv')
 
 # 名前のプルダウンメニューを作成
-name = st.selectbox('キャラクターを選択してください', df['name'].unique())
+name = st.selectbox('キャラクターを選択してください', df['名前'].unique())
 
 # 選択された名前のデータを抽出
 selected_data = df[df['名前'] == name]
