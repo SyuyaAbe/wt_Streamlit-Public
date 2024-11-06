@@ -6,7 +6,7 @@ st.set_page_config(page_title='ワートリ')
 st.title('ワートリ 隊員パラメータ')
 
 # CSVファイルを読み込み
-df = pd.read_csv('/Users/syuya/Desktop/develop/wt/params.csv')
+df = pd.read_csv('./params.csv')
 
 # 名前のプルダウンメニューを作成
 name = st.selectbox('キャラクターを選択してください', df['name'].unique())
