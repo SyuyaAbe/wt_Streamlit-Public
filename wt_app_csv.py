@@ -12,7 +12,7 @@ df = pd.read_csv('./params.csv')
 name = st.selectbox('キャラクターを選択してください', df['name'].unique())
 
 # 選択された名前のデータを抽出
-selected_data = df[df['name'] == name]
+selected_data = df[df['名前'] == name]
 
 # レーダーチャートを描画
 if not selected_data.empty:
