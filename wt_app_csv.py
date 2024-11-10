@@ -25,9 +25,8 @@ st.markdown(
 
 
 # CSVファイルを読み込み
-df = pd.read_csv('/Users/syuya/Desktop/develop/wt/params.csv')
-#df = pd.read_csv('./params.csv')
-equipment_df = pd.read_csv('/Users/syuya/Desktop/develop/wt/equipment.csv')
+df = pd.read_csv('./params.csv')
+equipment_df = pd.read_csv('./equipment.csv')
 
 
 # 'name'列が存在しない場合、日本語列名である可能性を考慮
