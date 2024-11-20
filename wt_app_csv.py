@@ -1,27 +1,30 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import streamlit.components.v1 as components
+import base64
 
-st.set_page_config(page_title='ワートリ')
+st.set_page_config(page_title='ワートリ', layout="wide")
+
+def add_background(image_path):
+    with open(image_path, "rb") as file:
+        encoded_image = base64.b64encode(file.read()).decode()
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background: url(data:image/jpeg;base64,{encoded_image});
+            background-size: cover;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+# 背景画像のパスを指定
+background_image = "./wt.jpeg"
+add_background(background_image)
+
 st.title('ワートリ 隊員パラメータ')
-
-# CSSの追加
-st.markdown(
-    """
-    <style>
-    body {
-        color: #b3e5fc;
-        background-color: #b3e5fc;
-    }
-    .stApp {
-        background-color: #black;
-    }
-    h1, h2, h3, h4, h5, h6 {
-        color: #b3e5fc;
-    }
-    </style>
-    """, unsafe_allow_html=True
-)
 
 
 # CSVファイルを読み込み
@@ -41,7 +44,7 @@ selected_data = df[df['名前'] == name]
 # レーダーチャートを描画
 if not selected_data.empty:
     st.markdown(f'## {name} のパラメータ')
-    radar_data = selected_data[['トリオン','防御・援護','機動','技術','射程','指揮','特殊戦術']]
+    radar_data = selected_data[['トリオン','攻撃','防御・援護','機動','技術','射程','指揮','特殊戦術']]
     radar_data = radar_data.T.reset_index()
     radar_data.columns = ['parameter', 'value']
 
