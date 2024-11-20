@@ -6,7 +6,7 @@ import plotly.express as px
 
 st.set_page_config(page_title='ワートリ', layout="wide")
 
-st.title('ワールドトリガー キャラクター別パラメータ&トリガー構成')
+st.title('ワールドトリガー パラメータ&トリガー構成')
 
 
 # CSVファイルを読み込み
