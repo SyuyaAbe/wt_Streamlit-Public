@@ -2,5 +2,4 @@ streamlit
 streamlit-folium
 pandas
 plotly.express
-streamlit.components.v1
 base64

@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import streamlit.components.v1 as components
+#import streamlit.components.v1 as components
 import base64
 
 st.set_page_config(page_title='ワートリ', layout="wide")
@@ -21,15 +21,15 @@ def add_background(image_path):
         unsafe_allow_html=True
     )
 # 背景画像のパスを指定
-background_image = "./wt.jpeg"
+background_image = "/Users/syuya/Desktop/develop/wt/wt.jpeg"
 add_background(background_image)
 
 st.title('ワートリ 隊員パラメータ')
 
 
 # CSVファイルを読み込み
-df = pd.read_csv('./params.csv')
-equipment_df = pd.read_csv('./equipment.csv')
+df = pd.read_csv('/Users/syuya/Desktop/develop/wt/params.csv')
+equipment_df = pd.read_csv('/Users/syuya/Desktop/develop/wt/equipment.csv')
 
 
 # 'name'列が存在しない場合、日本語列名である可能性を考慮
