@@ -7,7 +7,7 @@ import base64
 st.set_page_config(page_title='ワートリ', layout="wide")
 
 def add_background(image_path):
-    with open(image_path, "rb") as file:
+    with open(image_path, "b") as file:
         encoded_image = base64.b64encode(file.read()).decode()
     st.markdown(
         f"""
