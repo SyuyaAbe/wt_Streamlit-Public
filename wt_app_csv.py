@@ -2,27 +2,9 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 #import streamlit.components.v1 as components
-import base64
+
 
 st.set_page_config(page_title='ワートリ', layout="wide")
-
-def add_background(image_path):
-    with open(image_path, "b") as file:
-        encoded_image = base64.b64encode(file.read()).decode()
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background: url(data:image/jpeg;base64,{encoded_image});
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-# 背景画像のパスを指定
-background_image = "/Users/syuya/Desktop/develop/wt/wt.jpeg"
-add_background(background_image)
 
 st.title('ワートリ 隊員パラメータ')
 
